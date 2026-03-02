@@ -8,6 +8,7 @@ const cors = require("cors");
 const movieModel=require("./models/Movie");
 const cookieParser = require("cookie-parser");
 
+
 connectDb();
 
 
