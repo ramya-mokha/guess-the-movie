@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+/* html, body, #root {
+  height: 100%;
+  box-sizing:border-box;
+} */
+
+@keyframes floatUp{
+  0%{
+    transform:translateY(0);
+  }
+  100%{
+    transform:translateY(-120vh);
+  }
+}
+.animate-float{
+  animation:floatUp linear infinite;
+}
+.primary-gradient {
+  background: linear-gradient(
+    135deg,
+    #facc15,
+    #f59e0b,
+    #fbbf24
+  );}
+
+.font-google {
+  font-family: 'Google Sans', sans-serif;
+}
