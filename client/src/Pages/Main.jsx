@@ -97,7 +97,7 @@ const Main = () => {
           border-3 rounded-lg border-[#2e3135] overflow-hidden relative bg-black">
 
             <img
-              src={`${import.meta.env.VITE_API_URL}uploads/${currMovie?.image}`}
+              src={`${import.meta.env.VITE_API_URL}/uploads/${currMovie?.image}`}
               alt=""
               className={`object-cover w-full h-full object-center   ${
                 clue === 0
