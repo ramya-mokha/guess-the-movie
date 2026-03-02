@@ -14,7 +14,10 @@ connectDb();
 
 const app = express();
 app.use(cookieParser());
-app.use(cors({ credentials: true, origin: "http://localhost:5173" }));
+app.use(cors({
+  origin: process.env.CLIENT_URL,
+  credentials: true
+}));
 
 app.use(express.json());
 
@@ -38,7 +41,13 @@ app.post("/login", async (req, res) => {
     { id: userDoc._id, email: userDoc.email },
     "SECRETKEY",
   );
-  res.cookie("token", token);
+  const isProduction = process.env.NODE_ENV === "production";
+
+res.cookie("token", token, {
+  httpOnly: true,
+  secure: isProduction,
+  sameSite: isProduction ? "None" : "Lax"
+});
   res.json({ message: "Login successful" });
 });
 
@@ -54,7 +63,13 @@ app.post("/register", async (req, res) => {
     { id: userDoc._id, email: userDoc.email },
     "SECRETKEY",
   );
-  res.cookie("token", token);
+ const isProduction = process.env.NODE_ENV === "production";
+
+res.cookie("token", token, {
+  httpOnly: true,
+  secure: isProduction,
+  sameSite: isProduction ? "None" : "Lax"
+});
   res.json({ message: "Login successful" });
   } catch (err) {
     if(err.code===11000){
@@ -97,6 +112,6 @@ app.get("/profile",verifyTokenMiddleware,(req,res)=>{
   res.json({user:req.user});
 })
 
-app.listen(3000, () => {
+app.listen(5000, () => {
   console.log("Listening on port 3000");
 });
