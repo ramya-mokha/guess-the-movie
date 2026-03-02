@@ -3,7 +3,6 @@ A Full-Stack Interactive Movie Guessing Game
 
 Guess The Movie is a full-stack web application built using the MERN stack where users identify movies from blurred images using progressive hints. It includes authentication, protected routes, scoring logic, and a fully responsive UI.
 
----
 
 ##  Features
 
@@ -21,7 +20,6 @@ Guess The Movie is a full-stack web application built using the MERN stack where
 - Login & registration system
 - Logout functionality
 
----
 
 ## Tech Stack
 
@@ -38,7 +36,6 @@ Guess The Movie is a full-stack web application built using the MERN stack where
 - JWT
 - bcrypt
 
----
 
 ## 🚀 Future Improvements
 - Leaderboard system
