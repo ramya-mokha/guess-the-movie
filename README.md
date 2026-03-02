@@ -1,7 +1,10 @@
-🎬 Guess The Movie – MERN Stack App
+**🎬 Guess The Movie – MERN Stack App**
 
 A full-stack movie guessing game built using the MERN stack. Players guess movies from blurred images using hints and earn points based on accuracy. The app includes authentication, protected routes, and a responsive UI.
-🚀 Features
+
+
+**🚀 Features**
+
 
 🔐 JWT Authentication (HttpOnly Cookies)
 
@@ -17,9 +20,11 @@ A full-stack movie guessing game built using the MERN stack. Players guess movie
 
 ✨ Animated Background
 
-🛠 Tech Stack
 
-Frontend
+**🛠 Tech Stack**
+
+
+**Frontend**
 
 React (Vite)
 
@@ -27,7 +32,7 @@ Tailwind CSS
 
 React Router
 
-Backend
+**Backend**
 
 Node.js
 
@@ -41,8 +46,8 @@ JWT
 
 bcrypt
 
-📂 Project Structure
+**📂 Project Structure**
 client/   → React frontend  
-server/   → Express backend  
+api/   → Express backend  
 
 
