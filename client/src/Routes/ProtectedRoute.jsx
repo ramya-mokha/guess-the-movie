@@ -4,7 +4,7 @@ import { Navigate } from 'react-router-dom';
 const ProtectedRoute = ({children}) => {
     const [isAuth,setIsauth]=useState(null);
     useEffect(()=>{
-        fetch("http://localhost:3000/profile",{
+        fetch(`${import.meta.env.VITE_API_URL}/profile`,{
             credentials:"include"
         }).then( async (res)=>{
             if(res.ok) setIsauth(true);

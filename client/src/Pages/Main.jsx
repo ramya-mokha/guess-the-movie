@@ -41,7 +41,7 @@ const Main = () => {
   }
   useEffect(() => {
     const fe = async () => {
-      const response = await fetch("http://localhost:3000/movies");
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/movies`);
       const data = await response.json();
       const shuffled=shuffleArray(data);
       setmdata(shuffled);
@@ -62,7 +62,7 @@ const Main = () => {
     setTimeout(()=>handleNextMovie(),1500);
   };
   const handleLogout = async () => {
-    const res = await fetch("http://localhost:3000/logout", {
+    const res = await fetch(`${import.meta.env.VITE_API_URL}/logout`, {
       method: "POST",
       credentials: "include",
     });
@@ -97,7 +97,7 @@ const Main = () => {
           border-3 rounded-lg border-[#2e3135] overflow-hidden relative bg-black">
 
             <img
-              src={`http://localhost:3000/uploads/${currMovie?.image}`}
+              src={`${import.meta.env.VITE_API_URL}uploads/${currMovie?.image}`}
               alt=""
               className={`object-cover w-full h-full object-center   ${
                 clue === 0
